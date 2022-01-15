@@ -6,7 +6,7 @@
     box-sizing: border-box;
 }
 body{
-    background-color: azure;
+    /* background-color: azure; */
     font-family: 'Libre Baskerville', serif;
 }
 
@@ -16,24 +16,26 @@ header{
     margin: auto;
 }
 
-.section{
-    width: 90%;
-    padding: 50px;
-    margin: auto;
-}
+.section-tags{
+    width: 80%;
+    margin: 15px auto;
 
+}
 .head{
  display: flex;
  flex-direction: row;
+ margin: auto;
  justify-content: center;
  align-items: center;
 }
 
 .head-text{
-    width: 50%;   
+    margin: auto;
+    flex: 1;
+    margin-left: 5%;
 }
 .head-text h1{
- font-size: 60px;
+ font-size: 50px;
  font-weight: 900;
 }
 .head-text p{
@@ -48,15 +50,20 @@ header{
     color: #fff;
     margin-top: 20px;
     cursor: pointer;
+
 }
 
 .head-product{
-    width: 50%;
     padding-left: 50px;
+    flex: 1;
+}
+
+.comon-button i{
+    margin: 0;
 }
 
 .head-product img{
-    width: 500px;
+    width: 70%;
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -70,7 +77,6 @@ header{
     align-items: center;
 }
 
-
 .product-head h1 {
     font-size: 30px;
     margin-bottom: 50px;
@@ -82,13 +88,13 @@ header{
 }
 .product{
     background-color: white;
-    width: 335px;
     padding: 15px;
     border-radius: 10px;
     box-shadow: 0px 0px 5px 5px rgba(168, 166, 166, 0.185);
 }
 .product img{
-    width: 300px;
+    max-width: 100%;
+    width: 100%;
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -126,4 +132,141 @@ header{
 
 .Popular-product a i{
     padding-left: 10px;
+    margin: 0;
+}
+
+.seeallbtn{
+    display: flex; 
+    justify-content: end; 
+    width: 75%;
+}
+
+
+/* Featured product css */
+.featured-products{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.featured-img{
+    /* width: 50%; */
+}
+.featured-img img{
+    width: 300px;
+    border: 4px solid #1A374D;
+    border-radius: 15px;
+}
+.featured-text{
+    width: 50%;
+    margin: 0 30px;
+}
+.featured-text h1{
+    margin-bottom: 20px;
+    font-size: 35px;
+    font-weight: 900;
+}
+
+.featured-text p{
+    line-height: 1.5;
+    text-align:justify;
+}
+
+
+footer{
+    height: 250px;
+    width: 100%;
+    background-color: black;
+    color: white;
+    text-align: center;
+    margin: auto 0;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+footer h1, h3, h4, i{
+    margin-top: 20px;
+}
+
+footer i{
+    font-size: 30px;
+    padding: 0  20px;
+    cursor: pointer;
+}
+
+footer h4{
+    color: #406882;
+}
+
+/* media 768 */
+@media screen and (max-width: 768px)   {
+section{
+    width: 96% !important;
+    margin: auto;
+}
+.all-product {
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+}
+.head-text h1{
+    font-size: 25px;
+}
+.comon-button{
+    font-size: 28px;
+    font-weight: 700;
+ }
+}
+/* media */
+@media screen and (max-width: 576px)   {
+.head{
+    flex-direction: column;
+    flex-direction: column-reverse;
+}
+.seeallbtn{
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+    .all-product{
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+.featured-products{
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+}
+.head-product{
+    width: 100%;
+}
+.head-text{
+    width: 100%;
+}
+header{
+    padding: 15px 0;
+    text-align: center;
+    margin-top: 20px auto;
+}
+.section-tags{
+    width: 100% !important;
+    padding: 5px;
+    margin: auto;
+}
+.head-text h1{
+ font-size: 30px;
+ text-align: center;
+}
+.featured-img{
+    margin-top: 5px;
+}
+.featured-text{
+    width: 100%;
+}
+.head-product img{
+    width: 100%;
+}
 }
