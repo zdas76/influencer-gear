@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,400;0,500;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&display=swap');
 
 *{
     margin: 0;
@@ -7,7 +7,7 @@
 }
 body{
     background-color: azure;
-    font-family: 'Roboto Mono', monospace;
+    font-family: 'Libre Baskerville', serif;
 }
 
 header{
@@ -25,7 +25,6 @@ header{
 .head{
  display: flex;
  flex-direction: row;
- border: 1px solid;
  justify-content: center;
  align-items: center;
 }
@@ -48,6 +47,7 @@ header{
     background-color: #1A374D;
     color: #fff;
     margin-top: 20px;
+    cursor: pointer;
 }
 
 .head-product{
@@ -57,5 +57,73 @@ header{
 
 .head-product img{
     width: 500px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
 
+/* ............ Popular-product CSS.......... */
+.Popular-product{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.product-head h1 {
+    font-size: 30px;
+    margin-bottom: 50px;
+}
+.all-product{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+}
+.product{
+    background-color: white;
+    width: 335px;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 5px 5px rgba(168, 166, 166, 0.185);
+}
+.product img{
+    width: 300px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.product-title, .price, .rating, .pdetails{
+    margin-top: 15px;
+}
+.product-title{
+    font-size: 30px;
+}
+
+.price{
+    font-size: 20px;
+}
+
+.fa-star,.field{
+    color: goldenrod;
+}
+
+.rating span{
+    font-size: 20px;
+    margin-left: 10px;
+}
+
+.Popular-product a{
+    display:flex;    
+    align-self: flex-end;
+    font-size: 30px;
+    font-weight: 900;
+    margin-top: 50px;
+    color: #406882;
+    text-decoration: none;  
+}
+
+.Popular-product a i{
+    padding-left: 10px;
 }
